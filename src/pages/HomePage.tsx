@@ -1,6 +1,7 @@
 import { Center, Container, HStack, Spinner, Text } from "@chakra-ui/react";
 import TableDashboard from "../components/TableDashboard";
 import Sidebar from "../components/Sidebar";
+import Calendar from "../components/Calendar";
 import React, { useEffect, useState } from "react";
 import { Member } from "../types/member";
 import { getAllMembers } from "../api/lib/member";
@@ -27,6 +28,7 @@ function HomePage(): JSX.Element {
   return (
     <HStack height="100vh" spacing="0">
       <Sidebar />
+      <Calendar />
       <Container>
         {isLoading ? (
           <Center>
